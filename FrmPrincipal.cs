@@ -12,9 +12,10 @@ namespace PDV
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        public FrmPrincipal(string nome)
         {
             InitializeComponent();
+            this.lbl_usuarioLogado.Text = nome;
         }
 
         private void tsm_funcionarios_Click(object sender, EventArgs e)
@@ -32,6 +33,17 @@ namespace PDV
         private void tsm_sair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            this.lbl_data.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void tsm_iniciarServico_Click(object sender, EventArgs e)
+        {
+            FrmCaixaPDV frmCaixa = new FrmCaixaPDV();
+            frmCaixa.ShowDialog();
         }
     }
 }
