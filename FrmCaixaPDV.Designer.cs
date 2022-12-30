@@ -495,6 +495,7 @@
             this.Controls.Add(this.ltv_produtos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
             this.Name = "FrmCaixaPDV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDV - Caixa";
@@ -533,7 +534,6 @@
         private TextBox txt_descricaoProduto;
         private Label label7;
         private Button btn_pesquisarProduto;
-        private TextBox txt_pesquisarProduto;
         private Label label6;
         private Panel panel2;
         private ListView ltv_produtos;
@@ -552,5 +552,6 @@
         private Label lbl_estoque;
         private Label lbl_idProduto;
         private Label lbl_estAtual;
+        public TextBox txt_pesquisarProduto;
     }
 }

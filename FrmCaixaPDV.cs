@@ -224,22 +224,21 @@ namespace PDV
 
         private void btn_fecharVenda_Click(object sender, EventArgs e)
         {
-            /*
-             * FrmFecharCompra frmFechar = new FrmFecharCompra();
-            frmFechar.txt_ValorTotalReceber.Text = this.lbl_totalCompra.Text;
-            this.lbl_caixaLivre.Text = "CAIXA LIVRE";
+            FrmFecharCompra frmFechar = new FrmFecharCompra();
+            frmFechar.lbl_totalAReceber.Text = this.lbl_TotalCompra.Text;
+            this.lbl_TotalCompra.Text = "CAIXA LIVRE";
             if (lbl_caixaLivre.Text == "CAIXA LIVRE")
             {
                 lbl_caixaLivre.ForeColor = Color.Green;
             }
             frmFechar.ShowDialog();
-            this.lbl_totalCompra.Text = "";
+            this.lbl_TotalCompra.Text = "";
             this.ltv_produtos.Items.Clear();
-             */
         }
 
         private void btn_fecharCaixa_Click(object sender, EventArgs e)
         {
+
             /*
              * lbl_caixaLivre.Text = "CAIXA FECHADO";
             if (lbl_caixaLivre.Text == "CAIXA FECHADO")

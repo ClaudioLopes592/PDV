@@ -500,6 +500,7 @@
             this.ClientSize = new System.Drawing.Size(966, 660);
             this.Controls.Add(this.dgv_funcionarios);
             this.Controls.Add(this.groupBox1);
+            this.IsMdiContainer = true;
             this.Name = "FrmFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDV - Funcionários";

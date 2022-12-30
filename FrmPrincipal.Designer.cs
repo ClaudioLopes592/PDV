@@ -104,7 +104,7 @@
             // 
             this.tsm_iniciarServico.Enabled = false;
             this.tsm_iniciarServico.Name = "tsm_iniciarServico";
-            this.tsm_iniciarServico.Size = new System.Drawing.Size(180, 22);
+            this.tsm_iniciarServico.Size = new System.Drawing.Size(178, 22);
             this.tsm_iniciarServico.Text = "Iniciar Serviço";
             this.tsm_iniciarServico.Click += new System.EventHandler(this.tsm_iniciarServico_Click);
             // 
@@ -184,6 +184,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmPrincipal";
