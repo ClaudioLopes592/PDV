@@ -135,6 +135,21 @@ namespace PDV
             conn.FecharConexao();
         }
 
+        private void ControlarEstoque()
+        {
+            int estoque = int.Parse(this.lbl_estoqueAtual.Text);
+            int estoqueMin = int.Parse(this.txt_qtdMin.Text);
+            int estoqueMax = int.Parse(this.txt_qtdMax.Text);
+            if (estoque <= estoqueMin)
+            {
+                MessageBox.Show($"O estoque chegou a seu minimo, realizar pedido do produto.\nQuantidade em estoque: {estoque} unidade(s).");
+            }
+            else if (estoque > estoqueMax)
+            {
+                MessageBox.Show("O estoque está acima de seu limite maximo, realizar promoção de venda do produto.");
+            }
+        }
+
         private byte[] img()
         {
             byte[] image_byte = null;
@@ -180,6 +195,7 @@ namespace PDV
             this.btn_cadastrar.Enabled = false;
             this.btn_editar.Enabled = true;
             this.btn_excluir.Enabled = true;
+            this.ControlarEstoque();
         }
 
         private void CalcularTotal()
