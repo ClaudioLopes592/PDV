@@ -66,8 +66,8 @@ namespace PDV
             //Abre gaveta
             //Encerra venda
             FrmCaixaPDV caixaPDV = new FrmCaixaPDV();
-            caixaPDV.txt_pesquisarProduto.Focus();
             this.Dispose();
+            caixaPDV.txt_pesquisarProduto.Focus();
         }
     }
 }

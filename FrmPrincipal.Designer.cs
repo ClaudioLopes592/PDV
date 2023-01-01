@@ -102,9 +102,8 @@
             // 
             // tsm_iniciarServico
             // 
-            this.tsm_iniciarServico.Enabled = false;
             this.tsm_iniciarServico.Name = "tsm_iniciarServico";
-            this.tsm_iniciarServico.Size = new System.Drawing.Size(178, 22);
+            this.tsm_iniciarServico.Size = new System.Drawing.Size(180, 22);
             this.tsm_iniciarServico.Text = "Iniciar Serviço";
             this.tsm_iniciarServico.Click += new System.EventHandler(this.tsm_iniciarServico_Click);
             // 
@@ -211,11 +210,11 @@
         public ToolStripMenuItem cadastrosToolStripMenuItem;
         public ToolStripMenuItem tsm_funcionarios;
         private Panel panel1;
-        private Label lbl_usuarioLogado;
         private Label lbl_data;
         public ToolStripMenuItem tsm_produtos;
         private Label label2;
         private Label label1;
         public ToolStripMenuItem tsm_iniciarServico;
+        public Label lbl_usuarioLogado;
     }
 }

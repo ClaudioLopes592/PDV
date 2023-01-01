@@ -42,8 +42,8 @@ namespace PDV
 
         private void tsm_iniciarServico_Click(object sender, EventArgs e)
         {
-            FrmCaixaPDV frmCaixa = new FrmCaixaPDV();
-            frmCaixa.ShowDialog();
+            FrmLoginCaixa loginCaixa = new FrmLoginCaixa();
+            loginCaixa.ShowDialog();
         }
     }
 }

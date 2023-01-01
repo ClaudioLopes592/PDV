@@ -195,9 +195,11 @@
             // 
             // txt_totalProduto
             // 
+            this.txt_totalProduto.Enabled = false;
+            this.txt_totalProduto.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txt_totalProduto.Location = new System.Drawing.Point(240, 420);
             this.txt_totalProduto.Name = "txt_totalProduto";
-            this.txt_totalProduto.Size = new System.Drawing.Size(131, 23);
+            this.txt_totalProduto.Size = new System.Drawing.Size(131, 26);
             this.txt_totalProduto.TabIndex = 21;
             this.txt_totalProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -257,9 +259,11 @@
             // 
             // txt_precoUnitario
             // 
+            this.txt_precoUnitario.Enabled = false;
+            this.txt_precoUnitario.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txt_precoUnitario.Location = new System.Drawing.Point(240, 238);
             this.txt_precoUnitario.Name = "txt_precoUnitario";
-            this.txt_precoUnitario.Size = new System.Drawing.Size(131, 23);
+            this.txt_precoUnitario.Size = new System.Drawing.Size(131, 26);
             this.txt_precoUnitario.TabIndex = 15;
             this.txt_precoUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -285,9 +289,11 @@
             // 
             // txt_codigoProduto
             // 
+            this.txt_codigoProduto.Enabled = false;
+            this.txt_codigoProduto.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txt_codigoProduto.Location = new System.Drawing.Point(312, 138);
             this.txt_codigoProduto.Name = "txt_codigoProduto";
-            this.txt_codigoProduto.Size = new System.Drawing.Size(166, 23);
+            this.txt_codigoProduto.Size = new System.Drawing.Size(166, 26);
             this.txt_codigoProduto.TabIndex = 12;
             this.txt_codigoProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -303,9 +309,11 @@
             // 
             // txt_descricaoProduto
             // 
+            this.txt_descricaoProduto.Enabled = false;
+            this.txt_descricaoProduto.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txt_descricaoProduto.Location = new System.Drawing.Point(18, 138);
             this.txt_descricaoProduto.Name = "txt_descricaoProduto";
-            this.txt_descricaoProduto.Size = new System.Drawing.Size(264, 23);
+            this.txt_descricaoProduto.Size = new System.Drawing.Size(264, 26);
             this.txt_descricaoProduto.TabIndex = 10;
             // 
             // label7
@@ -332,9 +340,10 @@
             // 
             // txt_pesquisarProduto
             // 
+            this.txt_pesquisarProduto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_pesquisarProduto.Location = new System.Drawing.Point(18, 52);
             this.txt_pesquisarProduto.Name = "txt_pesquisarProduto";
-            this.txt_pesquisarProduto.Size = new System.Drawing.Size(197, 23);
+            this.txt_pesquisarProduto.Size = new System.Drawing.Size(197, 27);
             this.txt_pesquisarProduto.TabIndex = 7;
             this.txt_pesquisarProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -444,16 +453,22 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.DarkGray;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label13.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.DarkBlue;
             this.label13.Location = new System.Drawing.Point(559, 561);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(360, 23);
+            this.label13.Size = new System.Drawing.Size(362, 25);
             this.label13.TabIndex = 8;
             this.label13.Text = "VALOR TOTAL DAS COMPRAS R$";
             // 
             // lbl_TotalCompra
             // 
+            this.lbl_TotalCompra.BackColor = System.Drawing.Color.Green;
+            this.lbl_TotalCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalCompra.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TotalCompra.ForeColor = System.Drawing.Color.White;
             this.lbl_TotalCompra.Location = new System.Drawing.Point(955, 551);
             this.lbl_TotalCompra.Name = "lbl_TotalCompra";
             this.lbl_TotalCompra.Size = new System.Drawing.Size(160, 40);
@@ -463,6 +478,8 @@
             // 
             // btn_fecharCaixa
             // 
+            this.btn_fecharCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_fecharCaixa.Enabled = false;
             this.btn_fecharCaixa.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_fecharCaixa.Location = new System.Drawing.Point(559, 613);
             this.btn_fecharCaixa.Name = "btn_fecharCaixa";
@@ -474,6 +491,7 @@
             // 
             // btn_fecharVenda
             // 
+            this.btn_fecharVenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_fecharVenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_fecharVenda.Location = new System.Drawing.Point(1049, 613);
             this.btn_fecharVenda.Name = "btn_fecharVenda";

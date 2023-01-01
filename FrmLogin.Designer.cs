@@ -119,6 +119,7 @@
             this.txt_senha.PasswordChar = '*';
             this.txt_senha.Size = new System.Drawing.Size(133, 26);
             this.txt_senha.TabIndex = 2;
+            this.txt_senha.Text = "123456";
             // 
             // label3
             // 
@@ -137,6 +138,7 @@
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(250, 26);
             this.txt_email.TabIndex = 1;
+            this.txt_email.Text = "claudioglopes1@gmail.com";
             // 
             // label2
             // 
@@ -155,6 +157,7 @@
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(250, 26);
             this.txt_nome.TabIndex = 0;
+            this.txt_nome.Text = "Claudio Lopes";
             // 
             // label1
             // 

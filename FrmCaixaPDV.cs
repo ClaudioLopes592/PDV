@@ -25,7 +25,6 @@ namespace PDV
         int count = 0;
         int estoque;
         int estoqueAtual;
-        int min;
 
         string origemCompleto = "";
         string foto = "";
@@ -98,7 +97,7 @@ namespace PDV
             cmd.Parameters.AddWithValue("@id_produto", this.lbl_idProduto.Text);
             cmd.ExecuteNonQuery();
             conn.FecharConexao();
-            MessageBox.Show("Produto editado no banco de dados com sucesso!");
+            //MessageBox.Show("Produto editado no banco de dados com sucesso!");
         }
 
         private byte[] img()
@@ -117,8 +116,8 @@ namespace PDV
         private void FrmCaixaPDV_Load(object sender, EventArgs e)
         {
             lbl_data.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            FrmLogin frmLogin = new FrmLogin();
-            lbl_nomeAtendente.Text = frmLogin.txt_nome.Text;
+            FrmLoginCaixa loginCaixa = new FrmLoginCaixa();
+            this.lbl_nomeAtendente.Text = loginCaixa.txt_nomeAtendente.Text;
             lbl_caixaLivre.Text = "CAIXA LIVRE";
             if (lbl_caixaLivre.Text == "CAIXA LIVRE")
             {
@@ -147,22 +146,6 @@ namespace PDV
             lbl_estAtual.Text = Convert.ToString(estoqueAtual);
         }
 
-        /*
-         * private void AtualizarEstoque()
-        {
-            estoque = Convert.ToInt32(lbl_estoque.Text);
-            qtd = Convert.ToInt32(lbl_quantidade.Text);
-            estoqueAtual = estoque - qtd;
-            lbl_estoqueAtual.Text = Convert.ToString(estoqueAtual);
-            min = Convert.ToInt32(lbl_min.Text);
-            if (estoqueAtual == 0)
-            {
-                MessageBox.Show("Produto esgotado no estoque!");
-                btn_mais.Enabled = false;
-            }
-        }
-         */
-
         private void SomarTotal()
         {
             valor = Convert.ToDouble(txt_precoUnitario.Text);
@@ -174,7 +157,6 @@ namespace PDV
         private void btn_menos_Click(object sender, EventArgs e)
         {
             this.DiminuiQuantidadeProduto();
-            //this.AtualizarEstoque();
         }
 
         private void DiminuiQuantidadeProduto()
@@ -183,7 +165,7 @@ namespace PDV
             {
                 count--;
                 this.lbl_quantidade.Text = Convert.ToString(count);
-                //this.SubtraiValorTotal();
+                this.SubtraiValorTotal();
             }
             else
             {
@@ -212,7 +194,6 @@ namespace PDV
             txt_totalProduto.Clear();
             txt_pesquisarProduto.Focus();
             this.AlterarProduto();
-            //this.btn_mais.Enabled = true;
         }
 
         private void CalcularTotalCompras()
@@ -238,50 +219,19 @@ namespace PDV
 
         private void btn_fecharCaixa_Click(object sender, EventArgs e)
         {
-
-            /*
-             * lbl_caixaLivre.Text = "CAIXA FECHADO";
+            lbl_caixaLivre.Text = "CAIXA FECHADO";
             if (lbl_caixaLivre.Text == "CAIXA FECHADO")
             {
                 lbl_caixaLivre.ForeColor = Color.Red;
             }
-             */
             this.Close();
         }
 
-        /*
-         * private void SubtraiValorTotal()
-        {
-            valor = Convert.ToDouble(lbl_precoUnitario.Text);
+         private void SubtraiValorTotal()
+         {
+            valor = Convert.ToDouble(txt_precoUnitario.Text);
             total -= valor;
-            this.lbl_totalItem.Text = Convert.ToString(total);
-        }
-         */
-
-        /*
-         * private void LimpaCampos()
-        {
-            txt_codigoProduto.Clear();
-            lbl_estoque.Text = "0";
-            lbl_estoqueAtual.Text = "0";
-            lbl_idProduto.Text = "0";
-            txt_nomeProduto.Clear();
-            txt_codigo.Clear();
-            lbl_precoUnitario.Text = "0";
-            lbl_quantidade.Text = "";
-            lbl_totalItem.Text = "0";
-            lbl_dataCadastro.Text = "";
-            lbl_unidade.Text = "0";
-            lbl_categoria.Text = "";
-            lbl_min.Text = "0";
-            lbl_max.Text = "0";
-            lbl_qtd.Text = "0";
-            lbl_precoCompra.Text = "0";
-            lbl_porcentagem.Text = "0";
-            lbl_totCompra.Text = "0";
-            count = 0;
-            txt_codigoProduto.Focus();
-        }
-         */
+            this.txt_totalProduto.Text = Convert.ToString(total);
+         }
     }
 }

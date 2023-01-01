@@ -68,7 +68,7 @@ namespace PDV
                         this.Close();
                     }
                     else
-                    {
+                    { 
                         MessageBox.Show("Usuário ou Senha inválidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
